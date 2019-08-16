@@ -1,0 +1,156 @@
+body{
+	margin: 0 auto;
+}
+
+@font-face{
+	font-family:Merienda;
+	src:url(../fonts/Merienda/Merienda-Regular.ttf);
+}
+
+.grid-container{
+	max-width: 1366px;
+	margin: 0 auto;
+	font-family:Merienda;
+	display: grid;
+	grid-area: auto;
+	grid-auto-columns: auto;
+	grid-auto-rows:auto;
+	grid-gap: 40px;
+}
+
+/* Start of the header */
+header{
+	grid-column: 1/5;
+	grid-row:2;
+}
+
+header nav a {
+  animation: color 5s infinite;
+  border-radius: 50%;
+}
+
+@keyframes color {
+  0% {
+    background-color: #fff;
+  }
+  60% {
+    background-color: #d7f5f0;
+  }
+}
+
+nav{
+	padding: 20px;
+	text-align:center;
+}
+
+.a{
+	text-decoration: none;
+	color: #222222;
+	padding: 40px;
+}
+
+.a:hover{
+	color:#D6D6D6;
+}
+/* end of the header */
+
+/*Start of the main*/
+main{
+	grid-column:3;
+	grid-row:3/4;
+}
+
+.photo{
+	background-image: url('../images/disco.jpg');
+	width: 800px;
+	height: 364px;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+#about, h1{
+	color: #fff;
+	text-align:center;
+	font-size: 60px;
+}
+
+.about{
+	width: 800px;
+	height: 364px;
+	text-align:center;
+}
+
+/*End of the main*/
+/*Start of the Feedback*/
+.feedback{
+	clear: both;
+	grid-column:3;
+	grid-row:6;
+	text-align:center;
+	width: 900px;
+}
+
+.go, .go1{
+	width: 200px;
+	height: 500px;
+	background: #e5e8ea;
+    box-shadow:1px 1px 1px rgba(0,0,0,0.7);
+    margin: 5px;
+
+}
+.go{
+	float: left;
+}
+.go1{
+	float: left;
+}
+#name{
+	font-size: 10px;
+}
+/*End of the Feedback*/
+
+/* start of the footer  */
+
+.shape{
+	grid-column:1/5;
+	grid-row:7;
+	clip-path:circle(65%);
+}
+
+footer{
+	padding: 10px 100px;
+	background:linear-gradient(to right,#d7f5f0,#fff,#d7f5f0);
+}
+
+li{	
+	list-style: none;
+}
+
+#contact{
+	text-decoration:none;
+	color: black;
+}
+
+#contact:hover{
+	color:#D6D6D6;
+}
+
+.footer-left{
+	text-align:left;
+	float: left;
+}
+
+.footer-right{
+	float: right;
+}
+
+#icon{
+	width: 30px;
+	height: 30px;
+}
+
+.footer-copyright{ 
+	clear: both;
+	text-align:center;
+}
+/*End of the footer*/

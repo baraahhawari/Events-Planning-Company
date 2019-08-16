@@ -1,0 +1,287 @@
+body{
+	margin: 0 auto;
+}
+
+@font-face{
+	font-family:Merienda;
+	src:url(../fonts/Merienda/Merienda-Regular.ttf);
+}
+
+.grid-container{
+	max-width: 1366px;
+	margin: 0 auto;
+	font-family:Merienda;
+	display: grid;
+	grid-area: auto;
+	grid-auto-columns: auto;
+	grid-auto-rows:auto;
+	grid-gap: 40px;
+}
+
+/* Start of the header */
+header{
+	grid-column: 1/5;
+	grid-row:2;
+}
+
+header nav a {
+  animation: color 5s infinite;
+  border-radius: 50%;
+}
+
+@keyframes color {
+  0% {
+    background-color: #fff;
+  }
+  60% {
+    background-color: #d7f5f0;
+  }
+}
+
+nav{
+	padding: 20px;
+	text-align:center;
+}
+
+.a{
+	text-decoration: none;
+	color: #222222;
+	padding: 40px;
+
+}
+
+.a:hover{
+	color:#D6D6D6;
+}
+
+#logo, h1, #para{
+	grid-column: 2/4;
+	grid-row:2;
+	text-align:center;
+}
+
+#logo:hover{
+	opacity: 0.5;
+}
+
+#span{
+	font-size: 20px;
+}
+
+h1{
+	font-size: 40px;
+}
+
+#para{
+	font-size:20px;
+}
+/* end of the header */
+
+/* Start of the slider */
+.slider{
+	grid-column:3;
+	grid-row:3/4;
+	grid-area: 100%;
+}
+
+.images{
+	width: 800px;
+	height: 364px;
+	background-image: url('../images/wedding.jpg');
+	background-size: 100% 100%;
+	animation: slider 10s infinite linear;
+}
+
+@keyframes slider{
+	0%{background-image: url('../images/wedding.jpg');}
+	35%{background-image: url('../images/birthday.jpg');}
+	75%{background-image: url('../images/conference.jpg');}
+	100%{background-image: url('../images/new-years-eve.jpg');}
+}
+/* End of the slider */
+
+/* start of the gridview */
+.gridview{
+	grid-column:3;
+	grid-row:5 ;
+	width: 800px;
+}
+
+#neon {
+  	color: #42f5c8;
+  	text-shadow:
+    0 0 5px #767a77,
+    0 0 10px #373837,
+    0 0 20px #686968,
+    0 0 40px #42f5c7,
+    0 0 80px #0ff,
+    0 0 90px #0ff,
+    0 0 100px #0ff,
+    0 0 150px #42f5c8;
+}
+
+#neon:hover {
+  color: #fff;
+}
+#im, .events, .events1{
+	width: 600px;
+	height: 300px;
+}
+.info, .info1, .info2{
+	width: 600px; 
+	height: 300px;
+	float: right;
+}
+
+.events{
+	display: inline-block;
+  	padding: 10px; 
+  	border: 1px solid #BFBFBF;
+  	box-shadow: 10px 10px 5px #aaaaaa;
+  	transform: rotate(-3deg);
+}
+
+.events1{
+	display: inline-block;
+  	padding: 10px;
+  	border: 1px solid #BFBFBF;
+  	box-shadow: 10px 10px 5px #aaaaaa;
+  	transform: rotate(-2.5deg);
+}
+
+.events:hover img{
+	opacity: 0.5;
+}
+
+.events1:hover img{
+	opacity: 0.5;
+}
+
+.middle {
+	color:#000;
+	opacity: 0;
+	font-weight: bolder;
+	text-align:center;
+  	position: absolute;
+  	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+  	font-size: 20px;
+}
+
+.events1:hover .middle{
+	opacity:1;
+}
+.events:hover .middle{
+	opacity:1;
+}
+
+h2{	
+	font-size: 50px;
+	text-align:center;
+}
+.info, .info1, .info2{
+	background: linear-gradient(to right,#cec0f0, #fff, #fff);
+	border: 1px solid #f1f1f1;
+	box-shadow: 10px 10px 5px #aaaaaa;
+}
+.label{
+	padding: 20px;
+	float: left;
+}
+h4{
+	text-align:center;
+}
+
+.input{
+	padding: 20px;
+	float: right;
+}
+input, label{
+	width:100%;
+	height: 70%;
+}
+button{
+	background:linear-gradient(to right,#f2e1ed,#fff,#fff);
+	padding: 10px 20px;
+	cursor: pointer;
+	font-weight: bolder;
+}
+.register:hover {
+  opacity: 0.5;
+}
+/*end of the gridview*/
+
+/*Start of the Feedback*/
+.feedback{
+	clear: both;
+	grid-column:3;
+	grid-row:8;
+	text-align:center;
+	width: 900px;
+}
+
+.go, .go1{
+	width: 200px;
+	height: 500px;
+	background: #e5e8ea;
+    box-shadow:1px 1px 1px rgba(0,0,0,0.7);
+    margin: 5px;
+
+}
+.go{
+	float: left;
+}
+.go1{
+	float: left;
+}
+#name{
+	font-size: 10px;
+}
+/*End of the Feedback*/
+
+/* start of the footer  */
+
+.shape{
+	grid-column:1/5;
+	grid-row:9;
+	clip-path:circle(65%);
+}
+
+footer{
+	padding: 10px 100px;
+	background:linear-gradient(to right,#d7f5f0,#fff,#d7f5f0);
+}
+
+li{	
+	list-style: none;
+}
+
+#contact{
+	text-decoration:none;
+	color: black;
+}
+
+#contact:hover{
+	color:#D6D6D6;
+}
+
+.footer-left{
+	text-align:left;
+	float: left;
+}
+
+.footer-right{
+	float: right;
+}
+
+#icon{
+	width: 30px;
+	height: 30px;
+}
+
+.footer-copyright{ 
+	clear: both;
+	text-align:center;
+}
+/*End of the footer*/
